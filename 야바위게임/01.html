@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <style>
+            body{ margin: 0; padding: 0;}
+            #wrap{ position: relative 800px; height: 300px; margin: 50px 0 0 100px;}
+            .box{ display: block;}
+            img{ position: absolute; top:10; width:150px; height:150px; z-index: 0; }
+            #box1{ position:absolute; left:0; width: 150px; height: 150px; background-color:cadetblue; z-index: 33;}
+            #box2{ position:absolute; left:170px; width: 150px; height: 150px; background-color:cadetblue; z-index: 33;}
+            #box3{ position:absolute; left:340px; width: 150px; height: 150px; background-color:cadetblue;z-index: 33;}
+        </style>
+        <script>
+            function aaa(){
+                var img = document.getElementById("img");
+                var random = Math.floor(Math.random()*3)+1;//1~3까지의 랜덤 숫자 생성
+                if(random==1){//1번이면
+                   img.style.left="0";//그림의 left값을 0으로(첫번째 네모 뒤)
+                }else if(random==2){
+                   img.style.left="170px";//그림의 left값을 170px으로(두번째 네모 뒤)
+                }else{
+                   img.style.left="340px";//그림의 left값을 340px으로(세번째 네모 뒤)
+                }
+            }
+            $(document).ready(function(){
+                $(".box").click(function(){
+                    $(this).css("display","none");
+                });
+            });
+        </script>
+    </head>
+    
+    <body onload="aaa()">
+        <div id="wrap">
+            <img id="img" src="./images/당첨.jpg" alt="광대"/>
+            <div>
+                <div class="box" id="box1"></div>
+                <div class="box" id="box2"></div>
+                <div class="box" id="box3"></div>
+            </div>
+            
+        </div>
+    </body>
+</html>
