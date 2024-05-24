@@ -1,2 +1,4 @@
-# yabawigame_js
-css,html,js 수업들으며 만든 야바위 게임
+# VSCODE 프로그램으로 야바위 게임 만들기
+- css,html,js 수업들으며 만든 게임
+- 제작기간 : 2일
+- 솔로 테스트 구현
